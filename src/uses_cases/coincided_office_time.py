@@ -3,15 +3,15 @@
 class Coincided_Office_Time:
     """ Use Case entitie Scheduled """
     def calculate_coincided_office_time(self, dataEngine, name_file):
-        data = dataEngine.read(name_file)
+        schedule = dataEngine.read(name_file)
         List_Employee = []
-        for name, time in data.items():
+        for name in schedule.keys():
             List_Employee.append(name)
         for employee_A in range(len(List_Employee)):
             for employee_B in range(employee_A + 1, len(List_Employee)):
-                hour = 0
-                for t in data[List_Employee[employee_A]]:
-                    if t in data[List_Employee[employee_B]]:
-                        hour += 1
-                print(List_Employee[employee_A], List_Employee[employee_B], end=": ->")
-                print(hour)
+                coincided_times = 0
+                for date in schedule[List_Employee[employee_A]]:
+                    if date in schedule[List_Employee[employee_B]]:
+                        coincided_times += 1
+                print(f"{List_Employee[employee_A]}-{List_Employee[employee_B]}", end=": ")
+                print(coincided_times)
