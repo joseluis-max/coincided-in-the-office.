@@ -2,13 +2,13 @@
 """ Testing file engine """
 
 import unittest
-from data_providers.file_engine import FileEngine
+from src.data_providers.file_engine import FileEngine
 
 class TestFileEngine(unittest.TestCase):
     """ Testing file engine methods """
 
     def test_read_file(self):
-        """ Checking if we can read a file succes"""
+        """ Checking if we can read a file success"""
         correct_data = {
             "RENE": ["MO10: 00-12: 00", "TU10: 00-12: 00", "TH01: 00-03: 00", "SA14: 00-18: 00", "SU20: 00-21: 00"],
             "ASTRID": ["MO10: 00-12: 00", "TH12: 00-14: 00", "SU20: 00-21: 00"],

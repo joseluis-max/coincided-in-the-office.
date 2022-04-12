@@ -1,4 +1,0 @@
-Please every file must be with blank line without spaces
-for avoid errors and unexpected reaults.
-
-NAME:"[DAY][START HOUR]-[END HOUR],[DAY][START HOUR]-[END HOUR]"
