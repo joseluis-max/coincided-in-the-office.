@@ -19,7 +19,7 @@ class TestFileEngine(unittest.TestCase):
         self.assertNotEqual(data, correct_data)
 
     def test_read_file_doesnt_exit(self):
-        """ Checking if we can read a file doesn't exist """
+        """ Checking if we read a file doesn't exist """
         fileEngine = FileEngine()
         self.assertRaises(FileNotFoundError, fileEngine.read, "where_is_this_file.txt")
 
