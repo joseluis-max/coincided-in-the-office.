@@ -28,4 +28,3 @@ O(n^2 * m)
     ``` shell
     main.py new_file_name
     ```
-
